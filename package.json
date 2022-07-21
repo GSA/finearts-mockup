@@ -6,6 +6,7 @@
     "serve": "eleventy --serve",
     "clean": "rm -r _site",
     "build": "eleventy",
+    "build:clean": "npm run clean && npm run build",
     "uswds:watch": "gulp watch",
     "uswds:compile": "gulp compile"
   },
