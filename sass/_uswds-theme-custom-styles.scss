@@ -1,0 +1,129 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS THEME CUSTOM STYLES
+----------------------------------------
+!! Copy this file to your project's
+   sass root. Don't edit the version
+   in node_modules.
+----------------------------------------
+Custom project SASS goes here.
+
+i.e.
+@include u-padding-right('05');
+----------------------------------------
+*/
+
+@use "uswds-core" as *;
+
+// Workarounds for nav overlay within a flex wrapper
+.usa-header {
+  z-index: 999;
+}
+.usa-navbar {
+  border: none;
+}
+
+.usa-logo small {
+  @include u-font('sans', '2xs');
+}
+
+.usa-hero {
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent, transparent),
+    linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent, transparent, transparent),
+    url('../../img/flamingo.jpg');
+  background-position-y: 100%;
+  min-height: units('mobile');
+  position: relative;
+
+  @media screen and (min-width: units('tablet-lg')) {
+    min-height: 50vh;
+  }
+}
+
+.usa-hero__credit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0.5em 1em;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.usa-hero__callout {
+  padding: 0;
+  background-color: transparent;
+  max-width: 100%;
+
+  @media screen and (min-width: units('tablet-lg')) {
+    margin: 2rem 0;
+  }
+}
+
+.usa-hero__heading, .usa-hero__heading--alt {
+  @include u-font('sans', '3xl');
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+  @media screen and (min-width: units('tablet-lg')) {
+    font-size: 4.5rem;
+  }
+}
+
+.home-actions__row {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: units('tablet-lg')) {
+    flex-direction: row;
+  }
+}
+
+.home-actions__block {
+  flex: 1;
+  padding: 1rem;
+  color: color('base-lightest');
+  background-color: color('ink');
+  text-decoration: none;
+  transition: all 0.1s;
+  border-bottom: 1px solid color('base-darker');
+
+  &:hover {
+    color: color('primary-light');
+    background-color: color('black');
+  }
+
+  @media screen and (min-width: units('tablet-lg')) {
+    padding: 5rem 2rem;
+    margin: 0.5rem 0.25rem;
+
+    &:first-child {
+      margin-left: 0rem;
+    }
+
+    &:last-child {
+      margin-right: 0rem;
+    }
+  }
+}
+
+.home-actions__body {
+  @include u-font('sans', 'md');
+
+  svg {
+    transform: scale(0.9);
+  }
+}
+
+.home-actions__heading {
+  @include u-font('sans', 'xl');
+}
+
+.usa-footer__primary-section {
+  padding: 3em 0;
+}

@@ -1,0 +1,16 @@
+/*
+----------------------------------------
+USWDS with settings overrides
+----------------------------------------
+Uncomment the following lines and add a list of changed settings
+in the form $setting: value,
+----------------------------------------
+*/
+
+// Available settings: https://designsystem.digital.gov/documentation/settings/
+
+@use "uswds-core" with (
+  $theme-show-notifications: false,
+  $theme-font-type-sans: 'public-sans',
+  $theme-header-logo-text-width: 50%,
+);

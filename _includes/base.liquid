@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/uswds/css/styles.css' | url }}">
+    <script src="{{ '/assets/uswds/js/uswds-init.min.js' | url }}"></script>
+    <script src="{{ '/assets/fontawesome-free/js/all.min.js' | url }}" defer></script>
+  </head>
+  <body>
+    <div class="display-flex flex-column flex-justify-start minh-viewport">
+      {% include "banner" %}
+      {% include "header" %}
+
+      <main id="main-content">
+        {{ content }}
+      </main>
+
+      <div class="margin-top-auto">
+        {% include "footer" %}
+        {% include "identifier" %}
+      </div>
+    </div>
+    <script src="{{ '/assets/uswds/js/uswds.min.js' | url }}"></script>
+    <script src="{{ '/assets/js/main.js' | url }}"></script>
+  </body>
+</html>
